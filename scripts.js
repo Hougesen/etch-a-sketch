@@ -5,12 +5,12 @@ createGrid(gridSize)
 
 newGridBtn.addEventListener("click", function () {
 
-    gridSize = prompt("Enter grid size between 1 and 64")
-    if (gridSize <= 64) {
+    gridSize = prompt("Enter row size between 2 and 64.")
+    if (gridSize <= 64 && gridSize >= 2) {
         clearGrid()
         createGrid(gridSize)
     } else {
-        alert("Grid size too big")
+        alert("Please enter a valid size.")
     }
 })
 
