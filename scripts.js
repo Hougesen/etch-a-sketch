@@ -4,9 +4,14 @@ const newGridBtn = document.querySelector("#newGridBtn")
 createGrid(gridSize)
 
 newGridBtn.addEventListener("click", function () {
-    gridSize = prompt("Enter grid size")
-    clearGrid()
-    createGrid(gridSize)
+
+    gridSize = prompt("Enter grid size between 1 and 64")
+    if (gridSize <= 64) {
+        clearGrid()
+        createGrid(gridSize)
+    } else {
+        alert("Grid size too big")
+    }
 })
 
 function clearGrid() {
